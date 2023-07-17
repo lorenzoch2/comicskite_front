@@ -8,6 +8,8 @@ import IniciarSesion from './views/IniciarSesion';
 
 import Salir from './views/Salir'; // Importamos el componente Salir
 
+import NotFound from './views/NotFound';
+
 import {BrowserRouter as Router, Route, Routes, Navigate  } from 'react-router-dom';
 //Importación de los Hooks que serán utilizados.
 
@@ -24,9 +26,16 @@ function App() {
   useEffect(() => {
     // Retrieve the token from local storage
     const token = localStorage.getItem('token');
-    const payload = JSON.parse(window.atob(token.split('.')[1]));
+    // Check if the token exists before proceeding
+    if (token) {
+      const payload = JSON.parse(window.atob(token.split('.')[1]));
+      // Update the state with the content of the token
+      setTokenContent(payload);
+    } else {
+      // Handle the case when there's no token available (optional)
+      console.log('No token found in local storage');
+    }
     // Update the state with the content of the token
-    setTokenContent(payload);
   }, []);
 
   console.log(tokenContent);
@@ -39,6 +48,7 @@ function App() {
           <Route path="/iniciar_sesion" element={tokenContent ? <Productos /> : <IniciarSesion/>} />
           <Route path="/productos" element={tokenContent ? <Productos /> : <Navigate to="/" />} />
           <Route path="/salir" element={<Salir />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Context.Provider>
     </Router>

@@ -1,24 +1,23 @@
-import { useEffect } from 'react';
 import Navbar from './NavbarJwt';
 import Context from '../Context/Context';
 import { useContext } from 'react';
 
 const Productos = () => {
-    const {tokenContent, setTokenContent} = useContext(Context);
+    const {tokenContent} = useContext(Context);
 
-    useEffect(() => {
-        // Retrieve the token from local storage
-        const token = localStorage.getItem('token');
+    // useEffect(() => {
+    //     // Retrieve the token from local storage
+    //     const token = localStorage.getItem('token');
 
-        // Decode the payload from the token
-        try {
-            const payload = JSON.parse(window.atob(token.split('.')[1]));
-            setTokenContent(payload);
-        } catch (error) {
-            // Handle the error if the token is not valid or cannot be decoded
-            console.error('Error decoding the token:', error);
-        }
-    }, [setTokenContent]);
+    //     // Decode the payload from the token
+    //     try {
+    //         const payload = JSON.parse(window.atob(token.split('.')[1]));
+    //         setTokenContent(payload);
+    //     } catch (error) {
+    //         // Handle the error if the token is not valid or cannot be decoded
+    //         console.error('Error decoding the token:', error);
+    //     }
+    // }, [setTokenContent]);
 
     return (
         <div>
