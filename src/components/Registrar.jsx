@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button, TextField } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+
 
 const RegistroUsuario = () => {
     const navigate = useNavigate();
@@ -170,6 +171,7 @@ const RegistroUsuario = () => {
                     </div>
                 </div>
             </form>
+            <ToastContainer />
         </div>
     );
 };
