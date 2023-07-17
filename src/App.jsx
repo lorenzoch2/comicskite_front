@@ -1,6 +1,7 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Main from './views/Main';
+import Home from './views/Home';
+import Productos from './views/Productos';
 
 import Registrar from './views/Registrar';
 import IniciarSesion from './views/IniciarSesion';
@@ -20,9 +21,10 @@ function App() {
     <Router>
       <Context.Provider value={globalState}>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
           <Route path="/registrar" element={<Registrar />} />
           <Route path="/iniciar_sesion" element={<IniciarSesion />} />
+          <Route path="/productos" element={<Productos />} />
         </Routes>
       </Context.Provider>
     </Router>
