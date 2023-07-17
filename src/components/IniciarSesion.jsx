@@ -30,11 +30,14 @@ const Login = () => {
             //console.log(response.data);
             // Si el inicio de sesión fue exitoso, guarda el token en el local storage y muestra el toast de éxito
             if (response.data.token) {
+                
                 localStorage.setItem('token', response.data.token);
+                
                 const token = localStorage.getItem('token');
+                
                 const payload = JSON.parse(window.atob(token.split('.')[1]));
                 setTokenContent(payload); // Actualizamos el token en el contexto
-                toast.success('Inicio de sesión exitoso');
+                //toast.success('Inicio de sesión exitoso');
                 navigate('/productos'); // Redirección a /productos después de un inicio de sesión exitoso
             } else {
                 toast.error('Error. Por favor, verifica tus credenciales.');
