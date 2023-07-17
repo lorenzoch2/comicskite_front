@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function NavbarButtons() {
     return (
-        <Nav className="w-100 justify-content-center">
+        <Nav className="w-100 justify-content-between">
 
 
             <Link to="/productos">

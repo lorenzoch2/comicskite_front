@@ -1,4 +1,4 @@
-import { Container, Navbar } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import NavbarLogo from '../components/NavbarLogo';
 import NavbarButtons from '../components/NavbarButtons';
 import NavbarButtonsAdmin from '../components/NavbarButtonsAdmin';
@@ -16,7 +16,7 @@ export default function NavbarComponent() {
           <div className="d-flex align-items-center">
             <NavbarLogo />
           </div>
-          <div className="d-box justify-content-between">
+          <div className="d-box align-items-center">
             <NavbarTitle />
             {tokenContent.administrador === 0 ? <NavbarButtons /> : <NavbarButtonsAdmin />}
           </div>
