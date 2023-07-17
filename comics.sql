@@ -8,7 +8,8 @@ CREATE TABLE usuario (
   apellido VARCHAR(255),
   direccion VARCHAR(255),
   telefono VARCHAR(255),
-  password VARCHAR(255)
+  password VARCHAR(255),
+  administrador  INT
 );
 
 -- Crear la tabla "producto"
