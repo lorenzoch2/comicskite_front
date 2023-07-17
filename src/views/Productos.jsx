@@ -29,7 +29,9 @@ const Productos = () => {
                         <div style={{ wordBreak: 'break-all', color: 'white' }}>
                             {tokenContent && (
                                 <>
-                                    <p>Token Payload: {JSON.stringify(tokenContent)}</p>
+                                    <p>Token id_usuario: {tokenContent.id_usuario}</p>
+                                    <p>Token email: {tokenContent.email}</p>
+                                    <p>Token administrador: {tokenContent.administrador}</p>
                                 </>
                             )}
                         </div>
