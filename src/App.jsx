@@ -33,7 +33,7 @@ function App() {
       setTokenContent(payload);
     } else {
       // Handle the case when there's no token available (optional)
-      console.log('No token found in local storage');
+      console.log('No se encontró ningún token. ');
     }
     // Update the state with the content of the token
   }, []);
