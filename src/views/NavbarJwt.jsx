@@ -12,15 +12,15 @@ export default function NavbarComponent() {
   
     return (
       <Navbar bg="dark" variant="dark">
-        <Container className="d-flex align-items-center justify-content-between">
+        <div className="d-flex align-items-center">
           <div className="d-flex align-items-center">
             <NavbarLogo />
           </div>
-          <div className="d-box">
+          <div className="d-box justify-content-between">
             <NavbarTitle />
             {tokenContent.administrador === 0 ? <NavbarButtons /> : <NavbarButtonsAdmin />}
           </div>
-        </Container>
+        </div>
       </Navbar>
     );
   }
