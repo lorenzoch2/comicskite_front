@@ -1,23 +1,9 @@
 import Navbar from './NavbarJwt';
-import jwt_decode from "jwt-decode";
+import decodeTokenPayload from '../services/services'
 
 const Productos = () => {
     const token = localStorage.getItem('token');
-
-    // Función para decodificar el payload del token
-    const decodeTokenPayload = () => {
-        try {
-            // Divide el token por el punto (.)
-            const payload = jwt_decode(token);
-
-            return payload;
-        } catch (error) {
-            console.error('Error al decodificar el token:', error);
-            return null;
-        }
-    };
-
-    const payload = decodeTokenPayload();
+    const payload = decodeTokenPayload(token);
 
     return (
         <div>
