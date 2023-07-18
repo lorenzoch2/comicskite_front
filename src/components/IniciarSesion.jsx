@@ -26,7 +26,7 @@ const Login = () => {
         e.preventDefault();
         try {
             // Aquí va la URL del backend donde se realizará el inicio de sesión
-            const response = await axios.post('http://localhost:3000/login', formData);
+            const response = await axios.post('http://localhost:3000/iniciar_sesion', formData);
             //console.log(response.data);
             // Si el inicio de sesión fue exitoso, guarda el token en el local storage y muestra el toast de éxito
             if (response.data.token) {
