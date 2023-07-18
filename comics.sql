@@ -54,3 +54,4 @@ CREATE TABLE likes (
   FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario),
   FOREIGN KEY (id_producto) REFERENCES producto (id_producto)
 );
+

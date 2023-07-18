@@ -28,9 +28,9 @@ function App() {
     const token = localStorage.getItem('token');
     // Check if the token exists before proceeding
     if (token) {
-      const payload = JSON.parse(window.atob(token.split('.')[1]));
       // Update the state with the content of the token
-      setTokenContent(payload);
+      setTokenContent(token);
+      
     } else {
       // Handle the case when there's no token available (optional)
       console.log('No se encontró ningún token. ');
