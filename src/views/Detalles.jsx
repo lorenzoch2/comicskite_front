@@ -70,7 +70,7 @@ const Detalles = () => {
                 <div className="row">
                     <div key={producto.id_producto} className="col-12">
                       <Card className="cardDetail d-flex flex-row">
-                        <Card.Img variant="top" src={`../../public/img/productos/${producto.imagen_grande}`} />
+                        <Card.Img variant="top" src={`../../public/img/productos/${producto.imagen_grande}`} alt={producto.nombre} style={{width: "200px"}} />
                         <Card.Body>
                           <Card.Title>{producto.nombre}</Card.Title>
                           <Card.Text>Número: {producto.numero}</Card.Text>
