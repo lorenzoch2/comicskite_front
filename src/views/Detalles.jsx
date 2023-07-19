@@ -66,11 +66,11 @@ const Detalles = () => {
                 src="img/productos/d_grande01.jpg"
                 alt="Imagen"
                           /> */}
-              <div className="container mt-4">
+              <div className="card-container d-flex flex-wrap justify-content-center">
                 <div className="row">
                     <div key={producto.id_producto} className="col-12">
-                      <Card>
-                        <Card.Img variant="top" src={`img/productos/${producto.imagen_grande}`} />
+                      <Card className="cardDetail d-flex flex-row">
+                        <Card.Img variant="top" src={`../../public/img/productos/${producto.imagen_grande}`} />
                         <Card.Body>
                           <Card.Title>{producto.nombre}</Card.Title>
                           <Card.Text>Número: {producto.numero}</Card.Text>
@@ -78,18 +78,6 @@ const Detalles = () => {
                           <Card.Text>Stock: {producto.stock}</Card.Text>
                           <Card.Text>Precio: ${producto.precio}</Card.Text>
                           <div className="w-100 justify-content-between">
-                            <Button
-                            variant="primary"
-                            className="m-1 mr-2 text-uppercase"
-                            style={{
-                              backgroundColor: "black",
-                              borderColor: "#ebca6d",
-                              color: "#ebca6d",
-                              fontSize: "12px",
-                            }}
-                          >
-                            Detalles
-                            </Button>
                             <Button
                             variant="primary"
                             className="mr-2 text-uppercase"
